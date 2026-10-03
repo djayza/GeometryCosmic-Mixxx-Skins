@@ -1,6 +1,6 @@
 # GeometryCosmic Mixxx Skins
 
-Two dark, CDJ-style skins for Mixxx DJ software, built around the Pioneer DDJ-400 mapping: a full-size skin and a compact one for 7" (1024x600) touch screens.
+Two dark, CDJ-style skins for Mixxx DJ software, built around the Pioneer DDJ-400 FLX-4 mapping: a full-size skin and a compact one for 7" (1024x600) touch screens.
 
 ## Included Skins
 
@@ -21,7 +21,7 @@ Two dark, CDJ-style skins for Mixxx DJ software, built around the Pioneer DDJ-40
 
 ![GeometryCosmic-7 Preview](geometry-cosmic-7.png)
 
-## DDJ-400 FX knobs
+## FX knobs
 - **LEVEL/DEPTH**: moves the dry/wet knob.
 - **SHIFT + LEVEL/DEPTH**: moves the META knob of the focused effect.
 
