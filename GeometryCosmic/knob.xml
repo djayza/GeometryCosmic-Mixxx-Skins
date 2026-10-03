@@ -1,0 +1,30 @@
+<!DOCTYPE template>
+<!--
+  A standard rotary knob with a coloured scale.
+  Variables: TooltipId, Control (full "group,key"), color, label
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>KnobCell</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>min,min</SizePolicy>
+    <Children>
+      <KnobComposed>
+        <TooltipId><Variable name="TooltipId"/></TooltipId>
+        <Size>44f,44f</Size>
+        <Knob>images/knob.svg</Knob>
+        <BackPath>images/knob_bg_<Variable name="color"/>.svg</BackPath>
+        <MinAngle>-135</MinAngle>
+        <MaxAngle>135</MaxAngle>
+        <Connection>
+          <ConfigKey><Variable name="Control"/></ConfigKey>
+        </Connection>
+      </KnobComposed>
+      <Label>
+        <ObjectName>KnobLabel</ObjectName>
+        <Text><Variable name="label"/></Text>
+        <Size>38f,44f</Size>
+      </Label>
+    </Children>
+  </WidgetGroup>
+</Template>

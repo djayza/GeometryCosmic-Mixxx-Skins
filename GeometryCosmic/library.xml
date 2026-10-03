@@ -1,0 +1,56 @@
+<!DOCTYPE template>
+<!--
+  Library: sidebar, search, cover art and track table.
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>LibraryContainer</ObjectName>
+    <Layout>vertical</Layout>
+    <SizePolicy>me,i</SizePolicy>
+    <Children>
+      <Splitter>
+        <ObjectName>LibrarySplitter</ObjectName>
+        <Orientation>horizontal</Orientation>
+        <SizePolicy>me,me</SizePolicy>
+        <SplitSizesConfigKey>[Skin],librarySidebar_splitsize</SplitSizesConfigKey>
+        <SplitSizes>2,8</SplitSizes>
+        <Children>
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Children>
+              <WidgetGroup>
+                <Layout>horizontal</Layout>
+                <Size>-1me,28f</Size>
+                <Children>
+                  <SearchBox></SearchBox>
+                </Children>
+              </WidgetGroup>
+              <Splitter>
+                <ObjectName>LibraryCoverArtSplitter</ObjectName>
+                <Orientation>vertical</Orientation>
+                <SizePolicy>me,me</SizePolicy>
+                <MinimumSize>30,30</MinimumSize>
+                <SplitSizesConfigKey>[Skin],coverArt_splitsize</SplitSizesConfigKey>
+                <SplitSizes>2,1</SplitSizes>
+                <Collapsible>0,1</Collapsible>
+                <Children>
+                  <LibrarySidebar></LibrarySidebar>
+                  <CoverArt>
+                    <ObjectName>LibraryCoverArt</ObjectName>
+                    <TooltipId>coverart</TooltipId>
+                    <SizePolicy>me,me</SizePolicy>
+                    <MinimumSize>30,30</MinimumSize>
+                  </CoverArt>
+                </Children>
+              </Splitter>
+            </Children>
+          </WidgetGroup>
+          <Library>
+            <ShowButtonText>false</ShowButtonText>
+            <TrackTableBackgroundColorOpacity>0.175</TrackTableBackgroundColorOpacity>
+          </Library>
+        </Children>
+      </Splitter>
+    </Children>
+  </WidgetGroup>
+</Template>

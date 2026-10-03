@@ -1,0 +1,67 @@
+<!DOCTYPE template>
+<!--
+  Whole-track waveform overview.
+  Variables: group, DeckSignalColor
+-->
+<Template>
+  <Overview>
+    <TooltipId>waveform_overview</TooltipId>
+    <ObjectName>CDJOverview</ObjectName>
+    <Group><Variable name="group"/></Group>
+    <SizePolicy>me,me</SizePolicy>
+    <BgColor>#0a0b0e</BgColor>
+    <PlayedOverlayColor>#b0000000</PlayedOverlayColor>
+    <SignalColor><Variable name="DeckSignalColor"/></SignalColor>
+    <SignalHighColor></SignalHighColor>
+    <SignalMidColor></SignalMidColor>
+    <SignalLowColor></SignalLowColor>
+    <SignalRGBHighColor></SignalRGBHighColor>
+    <SignalRGBMidColor></SignalRGBMidColor>
+    <SignalRGBLowColor></SignalRGBLowColor>
+    <PlayPosColor>#ffffff</PlayPosColor>
+    <DefaultMark>
+      <Align>bottom|right</Align>
+      <Color>#25a8ff</Color>
+      <TextColor>#000000</TextColor>
+      <Text> %1 </Text>
+    </DefaultMark>
+    <Mark>
+      <Control>cue_point</Control>
+      <Align>top|right</Align>
+      <Color>#ff8a1f</Color>
+      <TextColor>#000000</TextColor>
+      <Text>C</Text>
+    </Mark>
+    <MarkRange>
+      <StartControl>loop_start_position</StartControl>
+      <EndControl>loop_end_position</EndControl>
+      <EnabledControl>loop_enabled</EnabledControl>
+      <Color>#3ddc84</Color>
+      <Opacity>0.7</Opacity>
+      <DisabledColor>#ffffff</DisabledColor>
+      <DisabledOpacity>0.4</DisabledOpacity>
+    </MarkRange>
+    <MarkRange>
+      <StartControl>intro_start_position</StartControl>
+      <EndControl>intro_end_position</EndControl>
+      <VisibilityControl>[Skin],show_intro_outro_cues</VisibilityControl>
+      <Color>#25a8ff</Color>
+      <Opacity>0.55</Opacity>
+      <DurationTextColor>#ffffff</DurationTextColor>
+      <DurationTextLocation>after</DurationTextLocation>
+    </MarkRange>
+    <MarkRange>
+      <StartControl>outro_start_position</StartControl>
+      <EndControl>outro_end_position</EndControl>
+      <VisibilityControl>[Skin],show_intro_outro_cues</VisibilityControl>
+      <Color>#25a8ff</Color>
+      <Opacity>0.55</Opacity>
+      <DurationTextColor>#ffffff</DurationTextColor>
+      <DurationTextLocation>before</DurationTextLocation>
+    </MarkRange>
+    <Connection>
+      <ConfigKey><Variable name="group"/>,playposition</ConfigKey>
+      <EmitOnDownPress>false</EmitOnDownPress>
+    </Connection>
+  </Overview>
+</Template>

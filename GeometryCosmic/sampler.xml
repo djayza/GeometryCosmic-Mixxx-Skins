@@ -1,0 +1,59 @@
+<!DOCTYPE template>
+<!--
+  One sampler cell.  Variables: i
+-->
+<Template>
+  <SetVariable name="group">[Sampler<Variable name="i"/>]</SetVariable>
+  <WidgetGroup>
+    <ObjectName>SamplerCell</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me,min</SizePolicy>
+    <Children>
+      <Label>
+        <ObjectName>SamplerNumber</ObjectName>
+        <Text><Variable name="i"/></Text>
+        <Size>18f,-1me</Size>
+      </Label>
+      <TrackProperty>
+        <ObjectName>SamplerTitle</ObjectName>
+        <Property>title</Property>
+        <Group><Variable name="group"/></Group>
+        <Elide>right</Elide>
+        <SizePolicy>me,min</SizePolicy>
+      </TrackProperty>
+      <Template src="skin:btn_display.xml">
+        <SetVariable name="ObjectName">SamplerPlayButton</SetVariable>
+        <SetVariable name="TooltipId">play_cue_set</SetVariable>
+        <SetVariable name="Text">PLAY</SetVariable>
+        <SetVariable name="LeftClickIsPushButton">false</SetVariable>
+        <SetVariable name="EmitOnPressAndRelease">false</SetVariable>
+        <SetVariable name="LControl"><Variable name="group"/>,cue_gotoandplay</SetVariable>
+        <SetVariable name="RControl"><Variable name="group"/>,stop</SetVariable>
+        <SetVariable name="DControl"><Variable name="group"/>,play</SetVariable>
+        <SetVariable name="Icon"></SetVariable>
+        <SetVariable name="IconOn"></SetVariable>
+        <SetVariable name="MinimumSize">40,22</SetVariable>
+        <SetVariable name="MaximumSize">40,22</SetVariable>
+        <SetVariable name="SizePolicy">f,f</SetVariable>
+      </Template>
+      <Template src="skin:btn_push.xml">
+        <SetVariable name="ObjectName">SamplerLoadButton</SetVariable>
+        <SetVariable name="TooltipId"></SetVariable>
+        <SetVariable name="Text">LOAD</SetVariable>
+        <SetVariable name="Control"><Variable name="group"/>,LoadSelectedTrack</SetVariable>
+        <SetVariable name="MinimumSize">40,22</SetVariable>
+        <SetVariable name="MaximumSize">40,22</SetVariable>
+        <SetVariable name="SizePolicy">f,f</SetVariable>
+      </Template>
+      <Template src="skin:btn_push.xml">
+        <SetVariable name="ObjectName">SamplerLoadButton</SetVariable>
+        <SetVariable name="TooltipId">eject</SetVariable>
+        <SetVariable name="Text">EJ</SetVariable>
+        <SetVariable name="Control"><Variable name="group"/>,eject</SetVariable>
+        <SetVariable name="MinimumSize">26,22</SetVariable>
+        <SetVariable name="MaximumSize">26,22</SetVariable>
+        <SetVariable name="SizePolicy">f,f</SetVariable>
+      </Template>
+    </Children>
+  </WidgetGroup>
+</Template>

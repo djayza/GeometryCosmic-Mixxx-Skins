@@ -1,0 +1,788 @@
+/*******************************************************************************
+ * GeometryCosmic skin for Mixxx
+ * Palette:
+ *   body #0d0e11   panel #15171c   panel-2 #1b1d23   bezel #2a2d35
+ *   text #d6d9df   dim  #7d8390    blue #25a8ff      orange #ff8a1f
+ *   green #3ddc84  red  #ff3d3d
+ ******************************************************************************/
+
+/* ---------------------------------------------------------------- base --- */
+#Mixxx,
+#SkinContainer {
+  background-color: #0d0e11;
+}
+
+WWidget {
+  font-family: "Helvetica Neue", "Segoe UI", "Roboto", "DejaVu Sans", "Arial";
+}
+
+WLabel {
+  color: #d6d9df;
+  font-size: 11px;
+  qproperty-alignment: 'AlignCenter';
+}
+
+WPushButton {
+  color: #cfd3db;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------------- toolbar --- */
+#ToolBar {
+  background-color: #14161b;
+  border-bottom: 1px solid #2a2d35;
+  padding: 0px 8px 0px 8px;
+}
+
+#ToolBarLogo {
+  color: #f1f3f7;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+}
+
+#ToolBarButton {
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  margin: 0px 4px 0px 0px;
+  color: #a6acb8;
+  font-size: 10px;
+  font-weight: bold;
+}
+#ToolBarButton:hover { border-color: #55596a; color: #ffffff; }
+#ToolBarButton[value="1"] {
+  background-color: #0f3350;
+  border: 1px solid #25a8ff;
+  color: #ffffff;
+}
+
+#KnobSmallCell { qproperty-layoutAlignment: 'AlignHCenter'; }
+
+#Spinny1, #Spinny2 { background-color: #14161b; }
+
+#KnobSmallLabel,
+#KnobLabel {
+  color: #7d8390;
+  font-size: 8px;
+  font-weight: bold;
+}
+#KnobLabel {
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+  padding-left: 2px;
+}
+
+#Clock {
+  color: #d6d9df;
+  font-size: 15px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignCenter';
+}
+
+/* --------------------------------------------------------------- decks --- */
+#DeckRow {
+  background-color: #0d0e11;
+  padding: 6px 6px 0px 6px;
+}
+
+#Deck1, #Deck2 {
+  background-color: #14161b;
+  border: 1px solid #2a2d35;
+  border-radius: 10px;
+  margin: 0px 3px 0px 3px;
+  padding: 8px;
+}
+#Deck1 { border-top: 2px solid #25a8ff; }
+#Deck2 { border-top: 2px solid #ff8a1f; }
+
+/* The "screen" */
+#CDJDisplay {
+  background-color: #050608;
+  border: 2px solid #2d3038;
+  border-radius: 8px;
+  padding: 6px 8px 6px 8px;
+  margin-bottom: 6px;
+}
+
+#DisplayHeader, #OverviewRow, #WaveformRow,
+#TitleColumn, #KeyColumn, #BpmChipColumn, #StarColumn, #WaveformZoomColumn {
+  background-color: transparent;
+}
+
+#DeckBadge1, #DeckBadge2 {
+  color: #050608;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 2px 8px 2px 0px;
+  qproperty-alignment: 'AlignCenter';
+}
+#DeckBadge1 { background-color: #25a8ff; }
+#DeckBadge2 { background-color: #ff8a1f; }
+
+#TrackTitle {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+}
+#TrackArtist {
+  color: #9aa0ad;
+  font-size: 11px;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+}
+
+#InfoCaption {
+  color: #6c7280;
+  font-size: 8px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+}
+
+/* Key / BPM "chips" in the header, CDJ-style bordered boxes */
+#KeyValue {
+  color: #3ddc84;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #101317;
+  border: 1px solid #2a2d35;
+  border-radius: 4px;
+  qproperty-alignment: 'AlignCenter';
+}
+#BpmChip {
+  color: #ffb56b;
+  font-family: "Consolas", "DejaVu Sans Mono", "Menlo", "Courier New";
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #241a0c;
+  border: 1px solid #6b4110;
+  border-radius: 4px;
+  qproperty-alignment: 'AlignCenter';
+}
+
+/* TRACK / REMAIN / TEMPO chip row, styled after the CDJ-3000 touch screen */
+#DisplayReadout { background-color: transparent; }
+#ReadoutChip, #TempoChip {
+  background-color: #0b0d10;
+  border: 1px solid #2a2d35;
+  border-radius: 5px;
+  margin: 0px 2px 0px 0px;
+  padding: 2px 6px 2px 6px;
+}
+#TempoChip { border-color: #6b4110; }
+
+#ChipCaption {
+  color: #6c7280;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+}
+
+#TrackNumberReadout {
+  color: #d6d9df;
+  font-family: "Consolas", "DejaVu Sans Mono", "Menlo", "Courier New";
+  font-size: 22px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignCenter';
+}
+#TimeReadout {
+  color: #ffffff;
+  font-family: "Consolas", "DejaVu Sans Mono", "Menlo", "Courier New";
+  font-size: 26px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignCenter';
+}
+#PitchReadout {
+  color: #ffb56b;
+  font-family: "Consolas", "DejaVu Sans Mono", "Menlo", "Courier New";
+  font-size: 22px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignCenter';
+}
+
+#CDJOverview {
+  border: 1px solid #23262d;
+}
+
+#ZoomButton {
+  background-color: #14161b;
+  border: 1px solid #2e313a;
+  border-radius: 3px;
+  margin: 1px 0px 1px 4px;
+  color: #a6acb8;
+  font-size: 12px;
+  font-weight: bold;
+}
+#ZoomButton:hover { border-color: #55596a; color: #ffffff; }
+#ZoomButton[value="1"] { background-color: #0f3350; border-color: #25a8ff; color: #ffffff; }
+
+/* ---------------------------------------------------------- side panels --- */
+#PlatterRow {
+  background-color: transparent;
+}
+
+#SidePanel {
+  background-color: transparent;
+  padding: 0px 2px 0px 2px;
+}
+
+#PanelCaption {
+  color: #6c7280;
+  font-size: 8px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+  margin-top: 2px;
+}
+
+#PanelButton,
+#SyncButton,
+#MasterButton,
+#SamplerLoadButton {
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  margin: 1px;
+  color: #cfd3db;
+  font-size: 9px;
+  font-weight: bold;
+}
+#PanelButton:hover,
+#SyncButton:hover,
+#MasterButton:hover,
+#SamplerLoadButton:hover {
+  border-color: #6c7286;
+  color: #ffffff;
+}
+#SlipButton {
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  margin: 1px;
+  color: #cfd3db;
+  font-size: 9px;
+  font-weight: bold;
+}
+#SlipButton:hover { border-color: #6c7286; color: #ffffff; }
+#SlipButton[value="1"] {
+  background-color: #4a3208;
+  border: 1px solid #ffb13d;
+  color: #ffffff;
+}
+#PanelButton[value="1"] {
+  background-color: #0f3350;
+  border-color: #25a8ff;
+  color: #ffffff;
+}
+#SyncButton[value="1"] {
+  background-color: #0e3b26;
+  border-color: #3ddc84;
+  color: #ffffff;
+}
+#MasterButton[value="1"] {
+  background-color: #4a3208;
+  border-color: #ffb13d;
+  color: #ffffff;
+}
+#MasterButton[value="2"] {
+  background-color: #4a3208;
+  border-color: #ffb13d;
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------------- pads --- */
+#PadRow {
+  background-color: transparent;
+  margin-top: 6px;
+}
+
+#CueButton {
+  background-color: #23180a;
+  border: 2px solid #8a4b0c;
+  border-radius: 8px;
+  margin: 1px 3px 1px 0px;
+  color: #ffb066;
+  font-size: 15px;
+  font-weight: bold;
+}
+#CueButton:hover { border-color: #ff8a1f; }
+#CueButton[value="1"] {
+  background-color: #ff8a1f;
+  border-color: #ffc27d;
+  color: #1a0d00;
+}
+
+#PlayButton {
+  background-color: #0e2018;
+  border: 2px solid #1c6b45;
+  border-radius: 8px;
+  margin: 1px 3px 1px 3px;
+}
+#PlayButton:hover { border-color: #3ddc84; }
+#PlayButton[value="1"] {
+  background-color: #123a28;
+  border-color: #3ddc84;
+}
+
+#HotcueButton {
+  background-color: #1a1c22;
+  border: 1px solid #2f323b;
+  border-radius: 6px;
+  margin: 1px 2px 1px 2px;
+  color: #6c7280;
+  font-size: 13px;
+  font-weight: bold;
+}
+#HotcueButton:hover { border-color: #6c7286; }
+#HotcueButton[light="true"] { color: #101114; }
+#HotcueButton[dark="true"]  { color: #f2f4f8; }
+
+/* -------------------------------------------------------------- mixer --- */
+#Mixer {
+  background-color: #14161b;
+  border: 1px solid #2a2d35;
+  border-radius: 10px;
+  margin: 0px 3px 0px 3px;
+  padding: 6px 4px 4px 4px;
+}
+
+#ChannelStrip {
+  background-color: transparent;
+}
+
+#ChannelLabel1, #ChannelLabel2, #ChannelLabelMaster {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  margin: 0px 2px 3px 2px;
+}
+#ChannelLabel1 { background-color: #0f3350; color: #7cc8ff; }
+#ChannelLabel2 { background-color: #4a2a08; color: #ffb56b; }
+#ChannelLabelMaster { background-color: #23262d; color: #a6acb8; }
+
+#CueMonitorButton {
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  margin: 3px 2px 4px 2px;
+  color: #a6acb8;
+  font-size: 8px;
+  font-weight: bold;
+}
+#CueMonitorButton:hover { border-color: #6c7286; color: #ffffff; }
+#CueMonitorButton[value="1"] {
+  background-color: #4a3208;
+  border-color: #ffb13d;
+  color: #ffffff;
+}
+
+#VuColumn, #FaderRow, #CrossfaderRow, #MasterMeterColumn {
+  background-color: transparent;
+}
+
+#XfaderLabel {
+  color: #7d8390;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- FX ---- */
+#EffectsRow, #SamplersSection {
+  background-color: #0d0e11;
+  padding: 0px 6px 0px 6px;
+}
+
+#EffectUnit {
+  background-color: #14161b;
+  border: 1px solid #2a2d35;
+  border-radius: 8px;
+  margin: 4px 3px 0px 3px;
+  padding: 4px 8px 6px 8px;
+}
+#EffectUnit[highlight="1"] {
+  border: 1px solid #25a8ff;
+  background-color: #0b1e2e;
+}
+
+#EffectUnitLabel {
+  color: #7d8390;
+  font-size: 11px;
+  font-weight: bold;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+}
+
+#EffectAssignColumn, #KnobCell, #KnobSmallCell,
+#EffectUnitHeader, #EffectNameRow, #EffectKnobRow {
+  background-color: transparent;
+}
+
+#EffectAssignButton,
+#EffectOnButton {
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  margin: 1px;
+  color: #a6acb8;
+  font-size: 10px;
+  font-weight: bold;
+}
+#EffectAssignButton:hover,
+#EffectOnButton:hover { border-color: #6c7286; color: #ffffff; }
+#EffectAssignButton[value="1"] {
+  background-color: #0f3350;
+  border-color: #25a8ff;
+  color: #ffffff;
+}
+#EffectOnButton[value="1"] {
+  background-color: #0e3b26;
+  border-color: #3ddc84;
+  color: #ffffff;
+}
+
+/* The selected-effect name: this is the whole point, so make it unmissable */
+WEffectSelector {
+  background-color: #0a0b0e;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  padding: 2px 8px 2px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+WEffectSelector:hover { border-color: #6c7286; }
+#EffectSelectorBoxblue    { color: #7cc8ff; }
+#EffectSelectorBoxgreen   { color: #7ce8a8; }
+#EffectSelectorBoxorange  { color: #ffb56b; }
+WEffectSelector QAbstractItemView {
+  background-color: #14161b;
+  color: #d6d9df;
+  selection-background-color: #0f3350;
+  selection-color: #ffffff;
+  border: 1px solid #343843;
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------ samplers --- */
+#SamplerCell {
+  background-color: #14161b;
+  border: 1px solid #2a2d35;
+  border-radius: 6px;
+  margin: 4px 3px 0px 3px;
+  padding: 2px 6px 2px 6px;
+}
+#SamplerNumber {
+  color: #ff8a1f;
+  font-size: 12px;
+  font-weight: bold;
+}
+#SamplerTitle {
+  color: #cfd3db;
+  font-size: 10px;
+  qproperty-alignment: 'AlignLeft | AlignVCenter';
+  padding-left: 4px;
+}
+#SamplerPlayButton {
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  margin: 1px;
+  color: #a6acb8;
+  font-size: 9px;
+  font-weight: bold;
+}
+#SamplerPlayButton[value="1"] {
+  background-color: #123a28;
+  border-color: #3ddc84;
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------- library --- */
+#LibraryContainer {
+  background-color: #0d0e11;
+  padding: 6px 6px 6px 6px;
+}
+
+WLibraryTextBrowser,
+WTrackTableView,
+WLibrarySidebar {
+  color: #d6d9df;
+  border: 1px solid #23262d;
+  background-color: #101216;
+  alternate-background-color: #14161b;
+  selection-color: #ffffff;
+  selection-background-color: #0f4d7a;
+}
+
+WTrackTableView::item:selected,
+WLibrarySidebar::item:selected,
+#LibraryBPMButton::item:selected {
+  color: #ffffff;
+  background-color: #0f4d7a;
+}
+WLibrarySidebar::item:selected:focus { outline: none; }
+WLibrarySidebar::item:!selected:focus { outline: none; border: 1px solid #ffffff; }
+WTrackTableView { outline: 1px solid #55596a; qproperty-focusBorderColor: #d6d9df; }
+WTrackTableView:focus,
+WLibrarySidebar:focus,
+WLibraryTextBrowser:focus { border: 1px solid #25a8ff; }
+WLibraryTextBrowser { padding-left: 5px; }
+
+WLibrary QLineEdit,
+WLibrary QPlainTextEdit,
+WBeatSpinBox,
+#LibraryBPMSpinBox {
+  color: #ffffff;
+  background-color: #050608;
+  selection-color: #000;
+  selection-background-color: #ccc;
+  border: 1px solid #25a8ff;
+}
+
+WTrackTableView::indicator:unchecked { image: url(skin:/images/lib_checkbox.svg); }
+WTrackTableView::indicator:checked   { image: url(skin:/images/lib_checkbox_on.svg); }
+
+#LibraryBPMButton:focus,
+#LibraryBPMButton::indicator:focus { outline: none; }
+
+WTrackTableViewHeader {
+  color: #a6acb8;
+  background-color: #14161b;
+  border-bottom: 1px solid #23262d;
+}
+WTrackTableViewHeader::section {
+  height: 1.1em;
+  font-weight: bold;
+  padding: 0.1em;
+  background-color: #14161b;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #23262d;
+  border-right: 1px solid #23262d;
+}
+WTrackTableViewHeader::up-arrow,
+WTrackTableViewHeader::down-arrow {
+  background-color: rgba(20,22,27,220);
+  padding: 0px;
+}
+WTrackTableViewHeader::up-arrow   { image: url(skin:/images/sort_up.svg); }
+WTrackTableViewHeader::down-arrow { image: url(skin:/images/sort_down.svg); }
+
+WSearchLineEdit {
+  margin: 0px 2px 4px 0px;
+  padding: 3px 4px 3px 4px;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  background-color: #0a0b0e;
+  color: #d6d9df;
+}
+WSearchLineEdit:focus {
+  border: 1px solid #25a8ff;
+  color: #ffffff;
+  selection-color: #101114;
+  selection-background-color: #d6d9df;
+}
+
+WLibrarySidebar { outline: none; margin: 0px; }
+WLibrarySidebar::branch:has-children:!has-siblings:closed,
+WLibrarySidebar::branch:closed:has-children:has-siblings {
+  border-image: none; image: url(skin:/images/branch_closed.svg);
+}
+WLibrarySidebar::branch:open:has-children:!has-siblings,
+WLibrarySidebar::branch:open:has-children:has-siblings {
+  border-image: none; image: url(skin:/images/branch_open.svg);
+}
+WLibrarySidebar::branch:!has-children:!has-siblings:closed:selected,
+WLibrarySidebar::branch:closed:!has-children:has-siblings:selected,
+WLibrarySidebar::branch:open:!has-children:!has-siblings:selected,
+WLibrarySidebar::branch:open:!has-children:has-siblings:selected {
+  border-image: none;
+  background-color: #101216;
+}
+
+#LibrarySplitter::handle {
+  image: url(skin:/images/handle_h.svg);
+  background: none;
+}
+#LibrarySplitter::handle:horizontal { width: 6px; }
+#LibrarySplitter::handle:vertical   { height: 6px; }
+
+#LibraryCoverArtSplitter { margin-top: 2px; }
+#LibraryCoverArtSplitter::handle {
+  image: url(skin:/images/handle_v.svg);
+  background-color: #0d0e11;
+}
+#LibraryCoverArtSplitter::handle:vertical { height: 6px; }
+
+#LibraryCoverArt {
+  padding: 6px;
+  background-color: #101216;
+  border: 1px solid #23262d;
+}
+
+/* AutoDJ / recording / analysis feature controls */
+#LibraryFeatureControls QLabel,
+#LibraryFeatureControls QRadioButton {
+  color: #d6d9df;
+  margin: 9px 5px 6px 0px;
+  font-size: 12px;
+}
+#LibraryFeatureControls QPushButton {
+  margin: 9px 3px 6px 3px;
+  padding: 3px 6px;
+  color: #d6d9df;
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 3px;
+  outline: none;
+}
+#LibraryFeatureControls QPushButton:!enabled {
+  color: #6c7280;
+  background-color: rgba(60,64,74,127);
+  border: 1px solid rgba(60,64,74,127);
+}
+#LibraryFeatureControls QPushButton:hover {
+  color: #ffffff;
+  background-color: #2a2e38;
+  border: 1px solid #4a4f5e;
+}
+#LibraryFeatureControls QPushButton:pressed,
+QPushButton#pushButtonAutoDJ:checked,
+QPushButton#pushButtonRepeatPlaylist:checked,
+QPushButton#pushButtonAnalyze:checked,
+QPushButton#pushButtonRecording:checked {
+  color: #ffffff;
+  background-color: #0f4d7a;
+  border: 1px solid #25a8ff;
+}
+
+/* Auto DJ transport row: these are plain QPushButtons Mixxx creates itself
+   (not defined by this skin), so they need styling by their fixed object
+   names directly, not just via the #LibraryFeatureControls parent rule. */
+QPushButton#pushButtonAutoDJ,
+QPushButton#pushButtonFadeNow,
+QPushButton#pushButtonSkipNext,
+QPushButton#pushButtonShuffle,
+QPushButton#pushButtonRepeatPlaylist {
+  margin: 9px 3px 6px 3px;
+  padding: 3px 6px;
+  min-width: 30px;
+  min-height: 22px;
+  background-color: #1d2027;
+  border: 1px solid #343843;
+  border-radius: 3px;
+  outline: none;
+}
+QPushButton#pushButtonAutoDJ:hover,
+QPushButton#pushButtonFadeNow:hover,
+QPushButton#pushButtonSkipNext:hover,
+QPushButton#pushButtonShuffle:hover,
+QPushButton#pushButtonRepeatPlaylist:hover {
+  background-color: #2a2e38;
+  border: 1px solid #4a4f5e;
+}
+QPushButton#pushButtonAutoDJ:pressed,
+QPushButton#pushButtonFadeNow:pressed,
+QPushButton#pushButtonSkipNext:pressed,
+QPushButton#pushButtonShuffle:pressed {
+  background-color: #0f4d7a;
+  border: 1px solid #25a8ff;
+}
+QPushButton#pushButtonAutoDJ:checked {
+  background-color: #0e3b26;
+  border: 1px solid #3ddc84;
+}
+QPushButton#pushButtonRepeatPlaylist:checked {
+  background-color: #0f4d7a;
+  border: 1px solid #25a8ff;
+}
+QPushButton#pushButtonFadeNow:!enabled,
+QPushButton#pushButtonSkipNext:!enabled {
+  background-color: rgba(60,64,74,80);
+  border: 1px solid rgba(60,64,74,80);
+}
+QPushButton#pushButtonAutoDJ { image: url(skin:/images/ic_autodj.svg) no-repeat center center; }
+QPushButton#pushButtonAutoDJ:checked { image: url(skin:/images/ic_autodj_on.svg) no-repeat center center; }
+QPushButton#pushButtonFadeNow:enabled { image: url(skin:/images/ic_fade.svg) no-repeat center center; }
+QPushButton#pushButtonFadeNow:!enabled { image: url(skin:/images/ic_fade_disabled.svg) no-repeat center center; }
+QPushButton#pushButtonSkipNext:enabled { image: url(skin:/images/ic_skip.svg) no-repeat center center; }
+QPushButton#pushButtonSkipNext:!enabled { image: url(skin:/images/ic_skip_disabled.svg) no-repeat center center; }
+QPushButton#pushButtonShuffle { image: url(skin:/images/ic_shuffle.svg) no-repeat center center; }
+QPushButton#pushButtonRepeatPlaylist { image: url(skin:/images/ic_repeat.svg) no-repeat center center; }
+QPushButton#pushButtonRepeatPlaylist:checked { image: url(skin:/images/ic_repeat_on.svg) no-repeat center center; }
+
+/* "Full Track" fade-mode selector and the transition-seconds spinbox */
+#fadeModeCombobox {
+  color: #d6d9df;
+  background-color: #0a0b0e;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 9px 3px 6px 3px;
+  min-height: 22px;
+}
+#fadeModeCombobox:hover { border-color: #6c7286; }
+#fadeModeCombobox QAbstractItemView {
+  background-color: #14161b;
+  color: #d6d9df;
+  selection-background-color: #0f3350;
+  selection-color: #ffffff;
+  border: 1px solid #343843;
+}
+#spinBoxTransition {
+  color: #d6d9df;
+  background-color: #0a0b0e;
+  border: 1px solid #343843;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: 9px 3px 6px 0px;
+  min-height: 22px;
+}
+#spinBoxTransition:hover, #spinBoxTransition:focus { border-color: #25a8ff; }
+
+/* Scroll bars */
+#LibraryContainer QScrollBar:horizontal,
+WEffectSelector QAbstractScrollArea QScrollBar:horizontal,
+WSearchLineEdit QAbstractScrollArea QScrollBar:horizontal {
+  border-top: 1px solid #23262d;
+  min-width: 12px;
+  background: #101216;
+  height: 12px;
+  margin: 0px;
+}
+#LibraryContainer QScrollBar:vertical,
+WEffectSelector QAbstractScrollArea QScrollBar:vertical,
+WSearchLineEdit QAbstractScrollArea QScrollBar:vertical {
+  border-left: 1px solid #23262d;
+  min-height: 12px;
+  background: #101216;
+  width: 12px;
+  margin: 0px;
+}
+#LibraryContainer QScrollBar::add-line,
+#LibraryContainer QScrollBar::sub-line,
+WSearchLineEdit QAbstractScrollArea QScrollBar::add-line,
+WSearchLineEdit QAbstractScrollArea QScrollBar::sub-line { width: 0px; height: 0px; }
+#LibraryContainer QScrollBar::add-page,
+#LibraryContainer QScrollBar::sub-page { background: #101216; }
+#LibraryContainer QScrollBar::handle:horizontal,
+#LibraryContainer QScrollBar::handle:vertical {
+  background: #343843;
+  border-radius: 4px;
+  margin: 2px;
+  min-width: 24px;
+  min-height: 24px;
+}
+#LibraryContainer QScrollBar::handle:horizontal:hover,
+#LibraryContainer QScrollBar::handle:vertical:hover { background: #4a4f5e; }
+
+/* Tool tips and menus */
+QToolTip {
+  background-color: #14161b;
+  color: #d6d9df;
+  border: 1px solid #343843;
+  padding: 2px;
+}

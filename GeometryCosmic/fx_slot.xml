@@ -1,0 +1,45 @@
+<!DOCTYPE template>
+<!--
+  One effect slot: selector, enable button and meta knob.
+  Variables: unit, effect
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>EffectSlot</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me,min</SizePolicy>
+    <Children>
+      <EffectSelector>
+        <ObjectName>EffectSelectorBox</ObjectName>
+        <EffectRack>1</EffectRack>
+        <EffectUnit><Variable name="unit"/></EffectUnit>
+        <Effect><Variable name="effect"/></Effect>
+        <MinimumSize>60,24</MinimumSize>
+        <MaximumSize>150,24</MaximumSize>
+        <SizePolicy>me,f</SizePolicy>
+      </EffectSelector>
+      <Template src="skin:btn_toggle.xml">
+        <SetVariable name="ObjectName">EffectEnableButton</SetVariable>
+        <SetVariable name="TooltipId">EffectSlot_enabled</SetVariable>
+        <SetVariable name="Text">ON</SetVariable>
+        <SetVariable name="Control">[EffectRack1_EffectUnit<Variable name="unit"/>_Effect<Variable name="effect"/>],enabled</SetVariable>
+        <SetVariable name="MinimumSize">28,24</SetVariable>
+        <SetVariable name="MaximumSize">28,24</SetVariable>
+        <SetVariable name="SizePolicy">f,f</SetVariable>
+      </Template>
+      <Template src="skin:knob_small.xml">
+        <SetVariable name="TooltipId">EffectSlot_metaknob</SetVariable>
+        <SetVariable name="Control">[EffectRack1_EffectUnit<Variable name="unit"/>_Effect<Variable name="effect"/>],meta</SetVariable>
+        <SetVariable name="color">blue</SetVariable>
+        <SetVariable name="label">META</SetVariable>
+      </Template>
+    </Children>
+    <Connection>
+      <ConfigKey>[EffectRack1_EffectUnit<Variable name="unit"/>],focused_effect</ConfigKey>
+      <BindProperty>highlight</BindProperty>
+      <Transform>
+        <IsEqual><Variable name="effect"/></IsEqual>
+      </Transform>
+    </Connection>
+  </WidgetGroup>
+</Template>
