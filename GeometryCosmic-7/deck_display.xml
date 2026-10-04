@@ -7,14 +7,14 @@
   <WidgetGroup>
     <ObjectName>CDJDisplay</ObjectName>
     <Layout>vertical</Layout>
-    <SizePolicy>me,me</SizePolicy>
+    <SizePolicy>e,me</SizePolicy>
     <Children>
 
       <!-- Header: deck badge, title / artist, key -->
       <WidgetGroup>
         <ObjectName>DisplayHeader</ObjectName>
         <Layout>horizontal</Layout>
-        <Size>-1me,32f</Size>
+        <Size>-1e,32f</Size>
         <Children>
           <Label>
             <ObjectName>DeckBadge<Variable name="i"/></ObjectName>
@@ -24,7 +24,7 @@
           <WidgetGroup>
             <ObjectName>TitleColumn</ObjectName>
             <Layout>vertical</Layout>
-            <SizePolicy>me,min</SizePolicy>
+            <SizePolicy>e,min</SizePolicy>
             <Children>
               <TrackProperty>
                 <ObjectName>TrackTitle</ObjectName>
@@ -108,7 +108,7 @@
       <WidgetGroup>
         <ObjectName>DisplayReadout</ObjectName>
         <Layout>horizontal</Layout>
-        <Size>-1me,46f</Size>
+        <Size>-1e,46f</Size>
         <Children>
 
           <WidgetGroup>
@@ -175,7 +175,7 @@
       <WidgetGroup>
         <ObjectName>OverviewRow</ObjectName>
         <Layout>horizontal</Layout>
-        <Size>-1me,24f</Size>
+        <Size>-1e,24f</Size>
         <Children>
           <Template src="skin:deck_overview.xml"/>
         </Children>

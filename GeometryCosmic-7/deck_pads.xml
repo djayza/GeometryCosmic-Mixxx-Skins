@@ -7,7 +7,7 @@
   <WidgetGroup>
     <ObjectName>PadRow</ObjectName>
     <Layout>horizontal</Layout>
-    <Size>-1me,38f</Size>
+    <Size>-1e,38f</Size>
     <Children>
 
       <Template src="skin:btn_display.xml">

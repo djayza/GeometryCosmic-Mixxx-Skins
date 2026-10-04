@@ -68,13 +68,13 @@
         <WidgetGroup>
           <ObjectName>PerformanceSection</ObjectName>
           <Layout>vertical</Layout>
-          <SizePolicy>me,max</SizePolicy>
+          <SizePolicy>e,max</SizePolicy>
           <Children>
 
             <WidgetGroup>
               <ObjectName>DeckRow</ObjectName>
               <Layout>horizontal</Layout>
-              <SizePolicy>me,max</SizePolicy>
+              <SizePolicy>e,max</SizePolicy>
               <Children>
                 <Template src="skin:deck.xml">
                   <SetVariable name="i">1</SetVariable>
@@ -93,7 +93,7 @@
             <WidgetGroup>
               <ObjectName>EffectsRow</ObjectName>
               <Layout>horizontal</Layout>
-              <SizePolicy>me,max</SizePolicy>
+              <SizePolicy>e,max</SizePolicy>
               <Children>
                 <Template src="skin:fx_unit_big.xml">
                   <SetVariable name="unit">1</SetVariable>
@@ -109,11 +109,11 @@
             <WidgetGroup>
               <ObjectName>SamplersSection</ObjectName>
               <Layout>vertical</Layout>
-              <SizePolicy>me,max</SizePolicy>
+              <SizePolicy>e,max</SizePolicy>
               <Children>
                 <WidgetGroup>
                   <Layout>horizontal</Layout>
-                  <SizePolicy>me,max</SizePolicy>
+                  <SizePolicy>e,max</SizePolicy>
                   <Children>
                     <Template src="skin:sampler.xml"><SetVariable name="i">1</SetVariable></Template>
                     <Template src="skin:sampler.xml"><SetVariable name="i">2</SetVariable></Template>
@@ -123,7 +123,7 @@
                 </WidgetGroup>
                 <WidgetGroup>
                   <Layout>horizontal</Layout>
-                  <SizePolicy>me,max</SizePolicy>
+                  <SizePolicy>e,max</SizePolicy>
                   <Children>
                     <Template src="skin:sampler.xml"><SetVariable name="i">5</SetVariable></Template>
                     <Template src="skin:sampler.xml"><SetVariable name="i">6</SetVariable></Template>

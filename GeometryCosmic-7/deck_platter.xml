@@ -7,7 +7,7 @@
   <WidgetGroup>
     <ObjectName>PlatterRow</ObjectName>
     <Layout>horizontal</Layout>
-    <SizePolicy>me,min</SizePolicy>
+    <SizePolicy>e,min</SizePolicy>
     <Children>
 
       <!-- LEFT PANEL: loops, quantize, jump, search -->
