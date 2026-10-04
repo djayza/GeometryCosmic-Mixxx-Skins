@@ -8,7 +8,7 @@
     <TooltipId>waveform_overview</TooltipId>
     <ObjectName>CDJOverview</ObjectName>
     <Group><Variable name="group"/></Group>
-    <SizePolicy>me,me</SizePolicy>
+    <SizePolicy>e,e</SizePolicy>
     <BgColor>#0a0b0e</BgColor>
     <PlayedOverlayColor>#b0000000</PlayedOverlayColor>
     <SignalColor><Variable name="DeckSignalColor"/></SignalColor>

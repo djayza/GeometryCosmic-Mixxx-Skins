@@ -8,7 +8,7 @@
     <TooltipId>waveform_display</TooltipId>
     <ObjectName>CDJWaveform</ObjectName>
     <Group><Variable name="group"/></Group>
-    <SizePolicy>me,me</SizePolicy>
+    <SizePolicy>e,e</SizePolicy>
     <BgColor>#060709</BgColor>
     <!-- SignalColor is the fallback used by simple (non-RGB) waveform types;
          High/Mid/Low and their RGB variants are intentionally left empty so

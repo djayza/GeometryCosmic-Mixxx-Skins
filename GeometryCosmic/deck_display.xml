@@ -32,7 +32,7 @@
                 <Property>title</Property>
                 <Group><Variable name="group"/></Group>
                 <Elide>right</Elide>
-                <SizePolicy>me,min</SizePolicy>
+                <SizePolicy>e,min</SizePolicy>
               </TrackProperty>
               <TrackProperty>
                 <ObjectName>TrackArtist</ObjectName>
@@ -40,7 +40,7 @@
                 <Property>artist</Property>
                 <Group><Variable name="group"/></Group>
                 <Elide>right</Elide>
-                <SizePolicy>me,min</SizePolicy>
+                <SizePolicy>e,min</SizePolicy>
               </TrackProperty>
             </Children>
           </WidgetGroup>
@@ -126,7 +126,7 @@
                 <Property>duration</Property>
                 <Group><Variable name="group"/></Group>
                 <Elide>right</Elide>
-                <SizePolicy>me,me</SizePolicy>
+                <SizePolicy>e,me</SizePolicy>
               </TrackProperty>
             </Children>
           </WidgetGroup>
