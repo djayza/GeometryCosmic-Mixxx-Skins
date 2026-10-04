@@ -8,7 +8,7 @@
   <WidgetGroup>
     <ObjectName>Deck<Variable name="i"/></ObjectName>
     <Layout>vertical</Layout>
-    <SizePolicy>e,min</SizePolicy>
+    <SizePolicy>i,min</SizePolicy>
     <Children>
       <Template src="skin:deck_display.xml"/>
       <Template src="skin:deck_platter.xml"/>
