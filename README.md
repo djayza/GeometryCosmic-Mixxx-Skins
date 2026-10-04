@@ -34,7 +34,6 @@ Copy both `GeometryCosmic` and `GeometryCosmic-7` into your Mixxx skins folder:
 
 To install or update both skins directly to your Mixxx directory, open your terminal (or SSH into your Pi) and run:
 
-```bash
 cd ~/.mixxx/skins && rm -rf GeometryCosmic GeometryCosmic-7 GeometryCosmic-Mixxx-Skins && git clone [https://github.com/djayza/GeometryCosmic-Mixxx-Skins.git](https://github.com/djayza/GeometryCosmic-Mixxx-Skins.git) temp_skins && cp -r temp_skins/GeometryCosmic temp_skins/GeometryCosmic-7 . && rm -rf temp_skins
 
 Then in Mixxx go to **Options ➔ Preferences ➔ Interface** and pick the skin. Press `Ctrl + Shift + R` to reload a skin without restarting.
@@ -44,4 +43,4 @@ Then in Mixxx go to **Options ➔ Preferences ➔ Interface** and pick the skin.
 - Other controllers work, but the FX labels assume the DDJ-400 layout.
 
 ## License
-<add your license, e.g. MIT or GPL-2.0>
+<GPL-2.0>
