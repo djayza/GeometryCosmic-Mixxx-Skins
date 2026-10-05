@@ -1,0 +1,25 @@
+<!DOCTYPE template>
+<!-- One deck waveform strip for stacked mode. -->
+<Template>
+  <WidgetGroup>
+    <ObjectName>WaveformRow</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>e,e</SizePolicy>
+    <MinimumSize>100,40</MinimumSize>
+    <Children>
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+        <Size>30f,-1e</Size>
+        <Children>
+          <Label>
+            <ObjectName>DeckBadge<Variable name="i"/></ObjectName>
+            <Text>&#8198;<Variable name="i"/></Text>
+            <Size>30f,34f</Size>
+          </Label>
+          <WidgetGroup><Layout>vertical</Layout><Size>1e,1e</Size><Children/></WidgetGroup>
+        </Children>
+      </WidgetGroup>
+      <Template src="skin:deck_waveform.xml"/>
+    </Children>
+  </WidgetGroup>
+</Template>

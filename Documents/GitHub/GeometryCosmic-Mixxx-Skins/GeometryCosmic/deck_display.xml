@@ -1,0 +1,242 @@
+<!DOCTYPE template>
+<!--
+  The CDJ-3000 "touch screen": track info, time, BPM, key, pitch, overview and waveform.
+  Variables: i, group, DeckSignalColor
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>CDJDisplay</ObjectName>
+    <Layout>vertical</Layout>
+    <SizePolicy>e,min</SizePolicy>
+    <Children>
+
+      <!-- Header: deck badge, title / artist, key -->
+      <WidgetGroup>
+        <ObjectName>DisplayHeader</ObjectName>
+        <Layout>horizontal</Layout>
+        <Size>-1e,36f</Size>
+        <Children>
+          <Label>
+            <ObjectName>DeckBadge<Variable name="i"/></ObjectName>
+            <Text>&#8198;<Variable name="i"/></Text>
+            <Size>30f,34f</Size>
+          </Label>
+          <WidgetGroup>
+            <ObjectName>TitleColumn</ObjectName>
+            <Layout>vertical</Layout>
+            <SizePolicy>e,min</SizePolicy>
+            <Children>
+              <TrackProperty>
+                <ObjectName>TrackTitle</ObjectName>
+                <TooltipId>track_title</TooltipId>
+                <Property>title</Property>
+                <Group><Variable name="group"/></Group>
+                <Elide>right</Elide>
+                <SizePolicy>e,min</SizePolicy>
+              </TrackProperty>
+              <TrackProperty>
+                <ObjectName>TrackArtist</ObjectName>
+                <TooltipId>track_artist</TooltipId>
+                <Property>artist</Property>
+                <Group><Variable name="group"/></Group>
+                <Elide>right</Elide>
+                <SizePolicy>e,min</SizePolicy>
+              </TrackProperty>
+            </Children>
+          </WidgetGroup>
+          <WidgetGroup>
+            <ObjectName>KeyColumn</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>58f,-1min</Size>
+            <Children>
+              <Label>
+                <ObjectName>InfoCaption</ObjectName>
+                <Text>KEY</Text>
+              </Label>
+              <Key>
+                <ObjectName>KeyValue</ObjectName>
+                <TooltipId>visual_key</TooltipId>
+                <Group><Variable name="group"/></Group>
+                <DisplayKey>true</DisplayKey>
+                <DisplayCents>false</DisplayCents>
+                <Alignment>center</Alignment>
+                <Connection>
+                  <ConfigKey><Variable name="group"/>,visual_key</ConfigKey>
+                </Connection>
+              </Key>
+            </Children>
+          </WidgetGroup>
+          <WidgetGroup>
+            <ObjectName>BpmChipColumn</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>76f,-1min</Size>
+            <Children>
+              <Label>
+                <ObjectName>InfoCaption</ObjectName>
+                <Text>BPM</Text>
+              </Label>
+              <NumberBpm>
+                <ObjectName>BpmChip</ObjectName>
+                <TooltipId>visual_bpm</TooltipId>
+                <Group><Variable name="group"/></Group>
+                <Alignment>center</Alignment>
+                <Connection>
+                  <ConfigKey><Variable name="group"/>,visual_bpm</ConfigKey>
+                </Connection>
+              </NumberBpm>
+            </Children>
+          </WidgetGroup>
+          <WidgetGroup>
+            <ObjectName>StarColumn</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>70f,-1min</Size>
+            <Children>
+              <Label>
+                <ObjectName>InfoCaption</ObjectName>
+                <Text>RATING</Text>
+              </Label>
+              <StarRating>
+                <TooltipId>starrating</TooltipId>
+                <Group><Variable name="group"/></Group>
+              </StarRating>
+            </Children>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+
+      <!-- TRACK / REMAIN / TEMPO readout chips, CDJ-style -->
+      <WidgetGroup>
+        <ObjectName>DisplayReadout</ObjectName>
+        <Layout>horizontal</Layout>
+        <Size>-1e,54f</Size>
+        <Children>
+
+          <WidgetGroup>
+            <ObjectName>ReadoutChip</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>64f,-1me</Size>
+            <Children>
+              <Label>
+                <ObjectName>ChipCaption</ObjectName>
+                <Text>LENGTH</Text>
+              </Label>
+              <TrackProperty>
+                <ObjectName>TrackNumberReadout</ObjectName>
+                <TooltipId></TooltipId>
+                <Property>duration</Property>
+                <Group><Variable name="group"/></Group>
+                <Elide>right</Elide>
+                <SizePolicy>e,me</SizePolicy>
+              </TrackProperty>
+            </Children>
+          </WidgetGroup>
+
+          <WidgetGroup>
+            <ObjectName>ReadoutChip</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>198f,-1me</Size>
+            <Children>
+              <Label>
+                <ObjectName>ChipCaption</ObjectName>
+                <Text>REMAIN (click to cycle)</Text>
+              </Label>
+              <NumberPos>
+                <ObjectName>TimeReadout</ObjectName>
+                <TooltipId>track_time</TooltipId>
+                <Group><Variable name="group"/></Group>
+              </NumberPos>
+            </Children>
+          </WidgetGroup>
+
+          <WidgetGroup><Layout>horizontal</Layout><Size>0me,1min</Size><Children/></WidgetGroup>
+
+          <WidgetGroup>
+            <ObjectName>TempoChip</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>108f,-1me</Size>
+            <Children>
+              <Label>
+                <ObjectName>ChipCaption</ObjectName>
+                <Text>TEMPO</Text>
+              </Label>
+              <NumberRate>
+                <ObjectName>PitchReadout</ObjectName>
+                <TooltipId>rate_display</TooltipId>
+                <Channel><Variable name="i"/></Channel>
+                <NumberOfDigits>2</NumberOfDigits>
+              </NumberRate>
+            </Children>
+          </WidgetGroup>
+
+        </Children>
+      </WidgetGroup>
+
+      <!-- Overview -->
+      <WidgetGroup>
+        <ObjectName>OverviewRow</ObjectName>
+        <Layout>horizontal</Layout>
+        <Size>-1e,30f</Size>
+        <Children>
+          <Template src="skin:deck_overview.xml"/>
+        </Children>
+      </WidgetGroup>
+
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+        <SizePolicy>e,me</SizePolicy>
+        <Children>
+      <!-- Scrolling waveform + zoom buttons -->
+      <WidgetGroup>
+        <ObjectName>WaveformRow</ObjectName>
+        <Layout>horizontal</Layout>
+        <SizePolicy>me,me</SizePolicy>
+        <MinimumSize>100,76</MinimumSize>
+        <Children>
+          <Template src="skin:deck_waveform.xml"/>
+          <WidgetGroup>
+            <ObjectName>WaveformZoomColumn</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>22f,-1me</Size>
+            <Children>
+              <Template src="skin:btn_push.xml">
+                <SetVariable name="ObjectName">ZoomButton</SetVariable>
+                <SetVariable name="TooltipId">waveform_zoom_down</SetVariable>
+                <SetVariable name="Text">+</SetVariable>
+                <SetVariable name="Control"><Variable name="group"/>,waveform_zoom_down</SetVariable>
+                <SetVariable name="MinimumSize">20,20</SetVariable>
+                <SetVariable name="MaximumSize">20,-1</SetVariable>
+                <SetVariable name="SizePolicy">f,me</SetVariable>
+              </Template>
+              <Template src="skin:btn_push.xml">
+                <SetVariable name="ObjectName">ZoomButton</SetVariable>
+                <SetVariable name="TooltipId">waveform_zoom_set_default</SetVariable>
+                <SetVariable name="Text">o</SetVariable>
+                <SetVariable name="Control"><Variable name="group"/>,waveform_zoom_set_default</SetVariable>
+                <SetVariable name="MinimumSize">20,20</SetVariable>
+                <SetVariable name="MaximumSize">20,-1</SetVariable>
+                <SetVariable name="SizePolicy">f,me</SetVariable>
+              </Template>
+              <Template src="skin:btn_push.xml">
+                <SetVariable name="ObjectName">ZoomButton</SetVariable>
+                <SetVariable name="TooltipId">waveform_zoom_up</SetVariable>
+                <SetVariable name="Text">-</SetVariable>
+                <SetVariable name="Control"><Variable name="group"/>,waveform_zoom_up</SetVariable>
+                <SetVariable name="MinimumSize">20,20</SetVariable>
+                <SetVariable name="MaximumSize">20,-1</SetVariable>
+                <SetVariable name="SizePolicy">f,me</SetVariable>
+              </Template>
+            </Children>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+
+        </Children>
+        <Connection>
+          <ConfigKey>[Skin],stacked_waves</ConfigKey>
+          <BindProperty>visible</BindProperty>
+          <Transform><Not/></Transform>
+        </Connection>
+      </WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

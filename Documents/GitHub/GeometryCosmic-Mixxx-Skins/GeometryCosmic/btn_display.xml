@@ -1,0 +1,51 @@
+<!DOCTYPE template>
+<!--
+  A button with a right-click control and a separate display control
+  (used for CUE / PLAY / sampler buttons).
+  Variables: ObjectName, TooltipId, Text, LControl, RControl, DControl,
+             MinimumSize, MaximumSize, SizePolicy, LeftClickIsPushButton,
+             EmitOnPressAndRelease
+             ("true" = must be held down like real CUE hardware, sending a
+             value on press AND on release. "false" = a single click toggles
+             it on, a second click toggles it off, for PLAY/PAUSE. Both
+             variables should be set the same way together.)
+-->
+<Template>
+  <PushButton>
+    <TooltipId><Variable name="TooltipId"/></TooltipId>
+    <ObjectName><Variable name="ObjectName"/></ObjectName>
+    <MinimumSize><Variable name="MinimumSize"/></MinimumSize>
+    <MaximumSize><Variable name="MaximumSize"/></MaximumSize>
+    <SizePolicy><Variable name="SizePolicy"/></SizePolicy>
+    <NumberStates>2</NumberStates>
+    <LeftClickIsPushButton><Variable name="LeftClickIsPushButton"/></LeftClickIsPushButton>
+    <State>
+      <Number>0</Number>
+      <Text><Variable name="Text"/></Text>
+      <Pressed scalemode="STRETCH_ASPECT"><Variable name="Icon"/></Pressed>
+      <Unpressed scalemode="STRETCH_ASPECT"><Variable name="Icon"/></Unpressed>
+    </State>
+    <State>
+      <Number>1</Number>
+      <Text><Variable name="Text"/></Text>
+      <Pressed scalemode="STRETCH_ASPECT"><Variable name="IconOn"/></Pressed>
+      <Unpressed scalemode="STRETCH_ASPECT"><Variable name="IconOn"/></Unpressed>
+    </State>
+    <Connection>
+      <ConfigKey><Variable name="LControl"/></ConfigKey>
+      <EmitOnPressAndRelease><Variable name="EmitOnPressAndRelease"/></EmitOnPressAndRelease>
+      <ButtonState>LeftButton</ButtonState>
+      <ConnectValueToWidget>false</ConnectValueToWidget>
+    </Connection>
+    <Connection>
+      <ConfigKey><Variable name="RControl"/></ConfigKey>
+      <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+      <ButtonState>RightButton</ButtonState>
+      <ConnectValueToWidget>false</ConnectValueToWidget>
+    </Connection>
+    <Connection>
+      <ConfigKey><Variable name="DControl"/></ConfigKey>
+      <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+  </PushButton>
+</Template>

@@ -1,0 +1,28 @@
+<!DOCTYPE template>
+<!--
+  Stacked waveforms: deck 1 above deck 2, full width. Shown when [Skin],stacked_waves = 1.
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>StackedWaves</ObjectName>
+    <Layout>vertical</Layout>
+    <SizePolicy>e,e</SizePolicy>
+    <MinimumSize>100,120</MinimumSize>
+    <Children>
+      <Template src="skin:stacked_one.xml">
+        <SetVariable name="i">1</SetVariable>
+        <SetVariable name="group">[Channel1]</SetVariable>
+        <SetVariable name="DeckSignalColor">#c7cbd1</SetVariable>
+      </Template>
+      <Template src="skin:stacked_one.xml">
+        <SetVariable name="i">2</SetVariable>
+        <SetVariable name="group">[Channel2]</SetVariable>
+        <SetVariable name="DeckSignalColor">#c7cbd1</SetVariable>
+      </Template>
+    </Children>
+    <Connection>
+      <ConfigKey>[Skin],stacked_waves</ConfigKey>
+      <BindProperty>visible</BindProperty>
+    </Connection>
+  </WidgetGroup>
+</Template>
