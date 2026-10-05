@@ -14,6 +14,7 @@
       <attribute config_key="[App],num_preview_decks">1</attribute>
 
       <attribute persist="true" config_key="[Skin],show_fx">0</attribute>
+      <attribute persist="true" config_key="[Skin],stacked_waves">1</attribute>
       <attribute config_key="[Skin],show_samplers">0</attribute>
       <attribute persist="true" config_key="[Skin],show_intro_outro_cues">1</attribute>
       <!-- 1 = show remaining time only (matches the CDJ-style REMAIN readout).
@@ -51,6 +52,8 @@
           <Layout>vertical</Layout>
           <SizePolicy>e,me</SizePolicy>
           <Children>
+
+            <Template src="skin:stacked_waves.xml"/>
 
             <WidgetGroup>
               <ObjectName>DeckRow</ObjectName>

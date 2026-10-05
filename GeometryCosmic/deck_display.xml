@@ -181,6 +181,10 @@
         </Children>
       </WidgetGroup>
 
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+        <SizePolicy>e,me</SizePolicy>
+        <Children>
       <!-- Scrolling waveform + zoom buttons -->
       <WidgetGroup>
         <ObjectName>WaveformRow</ObjectName>
@@ -226,6 +230,13 @@
         </Children>
       </WidgetGroup>
 
+        </Children>
+        <Connection>
+          <ConfigKey>[Skin],stacked_waves</ConfigKey>
+          <BindProperty>visible</BindProperty>
+          <Transform><Not/></Transform>
+        </Connection>
+      </WidgetGroup>
     </Children>
   </WidgetGroup>
 </Template>

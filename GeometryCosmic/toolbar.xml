@@ -33,6 +33,16 @@
         <SetVariable name="MaximumSize">80,26</SetVariable>
         <SetVariable name="SizePolicy">f,f</SetVariable>
       </Template>
+      <WidgetGroup><Layout>horizontal</Layout><Size>6f,1min</Size><Children/></WidgetGroup>
+      <Template src="skin:btn_toggle.xml">
+        <SetVariable name="ObjectName">ToolBarButton</SetVariable>
+        <SetVariable name="TooltipId"></SetVariable>
+        <SetVariable name="Text">STACK</SetVariable>
+        <SetVariable name="Control">[Skin],stacked_waves</SetVariable>
+        <SetVariable name="MinimumSize">64,26</SetVariable>
+        <SetVariable name="MaximumSize">64,26</SetVariable>
+        <SetVariable name="SizePolicy">f,f</SetVariable>
+      </Template>
       <Template src="skin:btn_toggle.xml">
         <SetVariable name="ObjectName">ToolBarButton</SetVariable>
         <SetVariable name="TooltipId">maximize_library</SetVariable>

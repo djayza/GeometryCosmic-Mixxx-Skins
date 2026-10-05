@@ -1,9 +1,0 @@
-<!DOCTYPE template>
-<Template>
-  <WidgetGroup>
-    <ObjectName>Spacer</ObjectName>
-    <Layout>horizontal</Layout>
-    <Size><Variable name="Size"/></Size>
-    <Children/>
-  </WidgetGroup>
-</Template>
