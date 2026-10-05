@@ -1,9 +1,10 @@
-# GeometryCosmic Mixxx Skins
+# GeometryCosmic Mixxx Skins V1.2 (New WaveStack)
 
 Two dark, CDJ-style skins for Mixxx DJ software, built around the Pioneer DDJ-400 DDJ-FLX4 mapping: a full-size skin and a compact one for 7" (1024x600) touch screens.
 
-## Included Skins
-
+## Included Skins V1.2
+-New Stacked waveforms, both scrolling waveforms sit on top of each other (deck 1 above deck 2) Each deck keeps its own overview strip. Toggle with the **STACK** button in the toolbar.
+![Included Skins V1.2 Preview](stackwave.png)
 ### GeometryCosmic (full size)
 - Big track display, jog wheel with cover art, hot cue pads, loop and beat-jump controls.
 - Channel mixer with EQ, filter, VU meters and crossfader.
